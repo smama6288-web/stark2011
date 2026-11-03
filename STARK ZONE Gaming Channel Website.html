@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARK ZONE | Blood Strike, Minecraft &amp; Horror Gaming</title>
+<meta name="description" content="STARK ZONE is a YouTube gaming channel featuring Blood Strike, Minecraft, horror and survival games. Watch, subscribe and join the zone.">
+<meta name="keywords" content="STARK ZONE, gaming channel, Blood Strike, Minecraft, horror games, survival games, YouTube gaming">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="STARK ZONE | Gaming Channel">
+<meta property="og:description" content="Blood Strike, Minecraft, horror and survival gameplay. Subscribe on YouTube.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "STARK ZONE",
+  "description": "Gaming YouTube channel: Blood Strike, Minecraft, horror and survival games."
+}
+</script>
+
+<style>
+:root {
+  --red: #ff1030;
+  --red2: #ff4d5e;
+  --bg: #050505;
+  --card: #0e0e10;
+  --line: #2a0a10;
+  --txt: #f4f4f4;
+  --mut: #a9a9b0;
+  --hd: 'Orbitron', 'Arial Black', Impact, sans-serif;
+  --bd: 'Rajdhani', 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font: 500 18px/1.6 var(--bd);
+  overflow-x: hidden;
+  animation: pg 0.8s ease both;
+}
+
+@keyframes pg {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+body.leaving {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--red2);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--hd);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 84px 0;
+  position: relative;
+}
+
+.sec-h {
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.sec-h h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-shadow: 0 0 18px rgba(255, 16, 48, 0.55);
+}
+
+.sec-h p {
+  color: var(--mut);
+  max-width: 560px;
+  margin: 10px auto 0;
+}
+
+.sec-h i {
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: var(--red);
+  box-shadow: 0 0 14px var(--red);
+}
+
+.alt {
+  background: linear-gradient(180deg, #0a0204, #050505);
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 999;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+
+#loader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loader b {
+  font: 900 4rem var(--hd);
+  color: #fff;
+  text-shadow: 0 0 12px var(--red), 0 0 34px var(--red);
+  animation: fl 1.2s infinite;
+}
+
+.bar {
+  width: 200px;
+  height: 4px;
+  background: #222;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: var(--red);
+  box-shadow: 0 0 12px var(--red);
+  animation: ld 1s infinite linear;
+}
+
+@keyframes ld {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(260%); }
+}
+
+@keyframes fl {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.75; }
+  50% { opacity: 0.35; }
+  55% { opacity: 1; }
+}
+
+/* Header & Nav */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: 0.3s;
+}
+
+header.sc {
+  background: rgba(0, 0, 0, 0.94);
+  box-shadow: 0 4px 24px rgba(255, 16, 48, 0.18);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 800 1.15rem var(--hd);
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--red);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font: 900 1.05rem var(--hd);
+  color: #fff;
+  text-shadow: 0 0 10px var(--red);
+  box-shadow: 0 0 14px rgba(255, 16, 48, 0.6), inset 0 0 10px rgba(255, 16, 48, 0.35);
+}
+
+.menu {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 15px;
+  font: 700 1rem var(--bd);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.25s;
+}
+
+.menu a:hover, .menu a.on {
+  color: #fff;
+  background: rgba(255, 16, 48, 0.16);
+  text-shadow: 0 0 10px var(--red);
+}
+
+.menu a.on:after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 2px;
+  height: 2px;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red);
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--red);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 8px;
+  border: 2px solid var(--red);
+  background: var(--red);
+  color: #fff;
+  font: 700 1rem var(--hd);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 16, 48, 0.5);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 34px rgba(255, 16, 48, 0.9);
+}
+
+.btn.o {
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn.o:hover {
+  background: var(--red);
+}
+
+.btn.sm {
+  padding: 9px 16px;
+  font-size: 0.78rem;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+
+.btn:hover:before {
+  left: 130%;
+}
+
+.pulse {
+  animation: pu 2s infinite;
+}
+
+@keyframes pu {
+  0%, 100% { box-shadow: 0 0 18px rgba(255, 16, 48, 0.5); }
+  50% { box-shadow: 0 0 44px rgba(255, 16, 48, 1); }
+}
+
+/* Hero Section */
+#home {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 110px 0 70px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 35%, #3a0610 0%, #0a0204 55%, #000 100%);
+}
+
+#fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 16, 48, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 16, 48, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  animation: gm 8s linear infinite;
+  mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%);
+}
+
+@keyframes gm {
+  to { background-position: 0 56px; }
+}
+
+.bolt {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 140px;
+  opacity: 0;
+  fill: none;
+  stroke: var(--red2);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px var(--red)) drop-shadow(0 0 20px var(--red));
+  animation: bz 6s infinite;
+}
+
+.b1 { left: 8%; }
+.b2 { right: 8%; animation-delay: 2.6s; transform: scaleX(-1); }
+
+@keyframes bz {
+  0%, 86%, 100% { opacity: 0; }
+  87% { opacity: 1; }
+  88% { opacity: 0.1; }
+  89% { opacity: 1; }
+  92% { opacity: 0; }
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+.neon {
+  font: 900 clamp(5rem, 20vw, 10rem)/1 var(--hd);
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 22px var(--red), 0 0 50px var(--red), 0 0 90px var(--red);
+  animation: fl 3.5s infinite, fy 5s ease-in-out infinite;
+}
+
+@keyframes fy {
+  50% { transform: translateY(-10px); }
+}
+
+.hero h1 {
+  font-size: clamp(1.3rem, 4.5vw, 2.6rem);
+  margin: 14px 0 8px;
+}
+
+.hero h1 span {
+  color: var(--red2);
+  text-shadow: 0 0 20px var(--red);
+}
+
+.hero p {
+  color: var(--mut);
+  max-width: 560px;
+  margin: 0 auto 30px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* About */
+.two {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.two p {
+  color: #d2d2d6;
+  margin-bottom: 14px;
+}
+
+.vis {
+  aspect-ratio: 4/3;
+  border: 2px solid var(--red);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 40%, #4a0714, #0a0204 70%);
+  box-shadow: 0 0 34px rgba(255, 16, 48, 0.4);
+  font: 900 clamp(4rem, 12vw, 7rem) var(--hd);
+  color: #fff;
+  text-shadow: 0 0 30px var(--red);
+}
+
+.cards3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px;
+  text-align: center;
+  transition: 0.35s;
+}
+
+.stat:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 28px rgba(255, 16, 48, 0.35);
+  transform: translateY(-6px);
+}
+
+.stat b {
+  display: block;
+  font: 900 2.4rem var(--hd);
+  color: var(--red2);
+  text-shadow: 0 0 16px var(--red);
+}
+
+.stat span {
+  color: var(--mut);
+}
+
+/* Games Section */
+.games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.game {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+}
+
+.game:hover {
+  transform: translateY(-10px) rotate(-0.6deg);
+  border-color: var(--red);
+  box-shadow: 0 14px 40px rgba(255, 16, 48, 0.4);
+}
+
+.th {
+  height: 170px;
+  display: grid;
+  place-items: center;
+  font: 900 1.5rem var(--hd);
+  position: relative;
+  overflow: hidden;
+}
+
+.th:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.85));
+}
+
+.th em {
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+  font-size: 3.4rem;
+  filter: drop-shadow(0 0 12px #000);
+}
+
+.g1 { background: linear-gradient(135deg, #1b5e20, #4e342e 60%, #0b2a0b); }
+.g2 { background: linear-gradient(135deg, #7a0010, #1a0004 70%); }
+.g3 { background: linear-gradient(135deg, #1a1a2e, #000 60%, #3a0020); }
+.g4 { background: linear-gradient(135deg, #3e2723, #0d1b0d 60%, #102a10); }
+
+.gb {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.gb h3 { font-size: 1.1rem; }
+.gb p { color: var(--mut); font-size: 1rem; flex: 1; }
+
+/* Videos Section */
+.vids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.vid {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.35s;
+}
+
+.vid:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 30px rgba(255, 16, 48, 0.35);
+  transform: translateY(-6px);
+}
+
+.vt {
+  aspect-ratio: 16/9;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.vt .pl {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--red);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  box-shadow: 0 0 26px var(--red);
+  transition: 0.3s;
+  padding-left: 5px;
+}
+
+.vt:hover .pl {
+  transform: scale(1.18);
+}
+
+.vb {
+  padding: 16px;
+}
+
+.vb h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.player {
+  margin: 40px auto 0;
+  max-width: 860px;
+  aspect-ratio: 16/9;
+  border: 2px solid var(--red);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 16, 48, 0.4);
+  background: #000;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.player p {
+  color: var(--mut);
+  padding: 20px;
+}
+
+/* News Section */
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.nw {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: 12px;
+  padding: 24px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nw:hover {
+  transform: translateX(6px);
+  box-shadow: 0 0 26px rgba(255, 16, 48, 0.3);
+}
+
+.tag {
+  align-self: flex-start;
+  background: rgba(255, 16, 48, 0.15);
+  color: var(--red2);
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nw h3 { font-size: 1.05rem; }
+.nw p { color: var(--mut); flex: 1; }
+
+/* Gallery Section */
+.gal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gi {
+  aspect-ratio: 4/3;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-size: 3.6rem;
+}
+
+.gi div {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s;
+}
+
+.gi span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  font: 700 0.8rem var(--hd);
+  transform: translateY(100%);
+  transition: 0.4s;
+  z-index: 2;
+}
+
+.gi:hover div {
+  transform: scale(1.2) rotate(2deg);
+}
+
+.gi:hover span {
+  transform: none;
+}
+
+.gi:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 30px rgba(255, 16, 48, 0.5);
+}
+
+.gi em {
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+#lb {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 300;
+  display: none;
+  place-items: center;
+  padding: 20px;
+}
+
+#lb.on {
+  display: grid;
+}
+
+#lb .box {
+  width: min(760px, 100%);
+  aspect-ratio: 16/10;
+  border: 2px solid var(--red);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 900 1.4rem var(--hd);
+  box-shadow: 0 0 50px rgba(255, 16, 48, 0.6);
+  position: relative;
+}
+
+#lb .x, #md .x {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#md {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 300;
+  display: none;
+  place-items: center;
+  padding: 20px;
+}
+
+#md.on {
+  display: grid;
+}
+
+#md .box {
+  background: var(--card);
+  border: 2px solid var(--red);
+  border-radius: 16px;
+  padding: 34px;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(255, 16, 48, 0.5);
+}
+
+#md h3 { margin-bottom: 12px; }
+#md ul { margin: 12px 0 20px 20px; color: var(--mut); }
+
+/* Counters */
+.cnt {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cn {
+  text-align: center;
+  padding: 38px 16px;
+  border: 1px solid var(--red);
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 0, rgba(255, 16, 48, 0.22), transparent 70%), var(--card);
+  box-shadow: 0 0 24px rgba(255, 16, 48, 0.25);
+}
+
+.cn b {
+  display: block;
+  font: 900 clamp(2rem, 6vw, 3.4rem) var(--hd);
+  color: #fff;
+  text-shadow: 0 0 20px var(--red);
+}
+
+.cn span {
+  color: var(--mut);
+  font-size: 1.1rem;
+}
+
+.note {
+  text-align: center;
+  color: var(--mut);
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+/* Subscribe */
+.sub {
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 22px;
+  border: 2px solid var(--red);
+  background: radial-gradient(ellipse at center, #5a0718, #120206 70%);
+  box-shadow: 0 0 60px rgba(255, 16, 48, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.sub h2 {
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px var(--red);
+}
+
+.sub p {
+  color: #e0c8cc;
+  margin-bottom: 26px;
+}
+
+.sub .btn {
+  font-size: 1.15rem;
+  padding: 16px 40px;
+}
+
+.link {
+  display: block;
+  margin-top: 18px;
+  color: var(--red2);
+  word-break: break-all;
+}
+
+/* Social */
+.soc {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.sk {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 10px;
+  text-align: center;
+  transition: 0.35s;
+  font: 700 0.85rem var(--hd);
+}
+
+.sk i {
+  display: block;
+  font-style: normal;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.sk:hover {
+  border-color: var(--red);
+  transform: translateY(-8px);
+  box-shadow: 0 0 28px rgba(255, 16, 48, 0.5);
+  color: var(--red2);
+}
+
+/* Contact */
+.ct {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.box2 {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.box2 h3 { margin-bottom: 14px; }
+.box2 p { color: var(--mut); margin-bottom: 10px; }
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input, textarea {
+  width: 100%;
+  background: #000;
+  border: 1px solid #3a1118;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 14px rgba(255, 16, 48, 0.4);
+}
+
+/* Footer */
+footer {
+  background: #000;
+  border-top: 2px solid var(--red);
+  box-shadow: 0 -6px 30px rgba(255, 16, 48, 0.2);
+  padding: 50px 0 24px;
+}
+
+.fg {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 30px;
+}
+
+footer h4 {
+  font: 700 0.95rem var(--hd);
+  margin-bottom: 12px;
+  color: var(--red2);
+}
+
+footer li { list-style: none; margin-bottom: 6px; }
+footer li a { color: var(--mut); }
+footer li a:hover { color: #fff; }
+
+.cp {
+  text-align: center;
+  color: var(--mut);
+  border-top: 1px solid #1a1a1a;
+  margin-top: 30px;
+  padding-top: 18px;
+  font-size: 0.95rem;
+}
+
+/* Reveal Animation */
+.rv {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media(max-width: 980px) {
+  .games { grid-template-columns: repeat(2, 1fr); }
+  .vids, .news, .gal { grid-template-columns: repeat(2, 1fr); }
+  .soc { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media(max-width: 780px) {
+  .burger { display: block; }
+  .menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0,0,0,0.97);
+    padding: 14px 20px;
+    border-bottom: 2px solid var(--red);
+    transform: translateY(-130%);
+    transition: 0.4s;
+  }
+  .menu.open { transform: none; }
+  .two, .ct, .fg { grid-template-columns: 1fr; }
+  .cards3, .cnt { grid-template-columns: 1fr; }
+  section { padding: 60px 0; }
+  .bolt { display: none; }
+}
+
+@media(max-width: 560px) {
+  .games, .vids, .news, .gal { grid-template-columns: 1fr; }
+  .soc { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .rv { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Loader Screen -->
+<div id="loader">
+  <b>SZ</b>
+  <div class="bar"><span></span></div>
+  <small>LOADING STARK ZONE</small>
+</div>
+
+<!-- Header / Navigation -->
+<header id="hd">
+  <div class="wrap nav">
+    <a href="#home" class="brand"><span class="logo">SZ</span>STARK ZONE</a>
+    <button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="menu" id="mn">
+      <li><a href="#home" class="on">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home">
+    <canvas id="fx"></canvas>
+    <div class="grid"></div>
+    <svg class="bolt b1" viewBox="0 0 100 400" preserveAspectRatio="none"><polyline points="55,0 30,90 62,130 20,230 58,270 10,400"/></svg>
+    <svg class="bolt b2" viewBox="0 0 100 400" preserveAspectRatio="none"><polyline points="45,0 70,100 38,150 80,240 42,290 90,400"/></svg>
+    
+    <div class="wrap hero">
+      <div class="neon">SZ</div>
+      <h1>Welcome to <span>STARK ZONE</span></h1>
+      <p>Blood Strike, Minecraft, horror and survival gameplay. Enter the zone and watch the next fight, scare or build.</p>
+      <div class="cta">
+        <a class="btn pulse" data-sub href="#" target="_blank" rel="noopener">&#9654; Subscribe on YouTube</a>
+        <a class="btn o" href="#videos">Watch Videos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="alt">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>About STARK ZONE</h2>
+        <i></i>
+      </div>
+      <div class="two">
+        <div class="rv">
+          <p>STARK ZONE is a gaming YouTube channel built around intense action, spooky nights and survival challenges. Every video is made to be played loud, in the dark, with friends.</p>
+          <p>You will find Blood Strike matches, Minecraft adventures, horror games that make you check behind you, and survival runs where one mistake ends everything.</p>
+          <p>New uploads, community moments and behind-the-scenes updates all live here. Subscribe so you never miss a drop.</p>
+          <a class="btn" data-sub href="#" target="_blank" rel="noopener">Join the Zone</a>
+        </div>
+        <div class="vis rv">ERROR 404 PHOTO EKA WADA NA HUTTO </div>
+      </div>
+      <div class="cards3">
+        <div class="stat rv"><b data-to="4" data-suf="">0</b><span>Featured game worlds</span></div>
+        <div class="stat rv"><b data-to="3" data-suf="">0</b><span>Core genres: shooter, horror, survival</span></div>
+        <div class="stat rv"><b data-to="100" data-suf="%">0</b><span>Gaming content</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section id="games">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Featured Games</h2>
+        <p>The worlds we play most on the channel.</p>
+        <i></i>
+      </div>
+      <div class="games">
+        <article class="game rv">
+          <div class="th g1"><em>&#9935;</em></div>
+          <div class="gb">
+            <h3>Minecraft</h3>
+            <p>Survival worlds, builds and wild experiments.</p>
+            <button class="btn sm" data-game="mc">Game Info</button>
+          </div>
+        </article>
+        <article class="game rv">
+          <div class="th g2"><em>&#127919;</em></div>
+          <div class="gb">
+            <h3>Blood Strike</h3>
+            <p>Fast battle royale fights and clutch moments.</p>
+            <button class="btn sm" data-game="bs">Game Info</button>
+          </div>
+        </article>
+        <article class="game rv">
+          <div class="th g3"><em>&#128128;</em></div>
+          <div class="gb">
+            <h3>Horror Games</h3>
+            <p>Scary gameplay played in the dark. Headphones on.</p>
+            <button class="btn sm" data-game="hr">Game Info</button>
+          </div>
+        </article>
+        <article class="game rv">
+          <div class="th g4"><em>&#128293;</em></div>
+          <div class="gb">
+            <h3>Survival Games</h3>
+            <p>Gather, craft and outlast every threat.</p>
+            <button class="btn sm" data-game="sv">Game Info</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" class="alt">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Latest Videos</h2>
+        <p>Tap a thumbnail to play it right here.</p>
+        <i></i>
+      </div>
+      <div class="vids" id="vids"></div>
+      <div class="player rv" id="player">
+        <p>Pick a video above to play it here, or open the channel on YouTube.</p>
+      </div>
+      <div class="cta" style="margin-top:28px">
+        <a class="btn" data-ch href="#" target="_blank" rel="noopener">View All Videos on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Gaming News</h2>
+        <p>Quick links to the latest updates for our games.</p>
+        <i></i>
+      </div>
+      <div class="news">
+        <article class="nw rv">
+          <span class="tag">Minecraft</span>
+          <h3>Minecraft Updates</h3>
+          <p>See the newest Minecraft releases, snapshots and patch notes.</p>
+          <a class="btn sm o" target="_blank" rel="noopener" href="https://www.google.com/search?q=Minecraft+latest+update&tbm=nws">Read Latest News</a>
+        </article>
+        <article class="nw rv">
+          <span class="tag">Blood Strike</span>
+          <h3>Blood Strike Updates</h3>
+          <p>Catch new seasons, weapons, maps and events as they land.</p>
+          <a class="btn sm o" target="_blank" rel="noopener" href="https://www.google.com/search?q=Blood+Strike+update&tbm=nws">Read Latest News</a>
+        </article>
+        <article class="nw rv">
+          <span class="tag">Horror</span>
+          <h3>Horror Gaming News</h3>
+          <p>New scary releases, demos and indie horror worth playing next.</p>
+          <a class="btn sm o" target="_blank" rel="noopener" href="https://www.google.com/search?q=horror+games+news&tbm=nws">Read Latest News</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="alt">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Photo Gallery</h2>
+        <p>Hover to zoom. Tap to open lightbox view.</p>
+        <i></i>
+      </div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+
+  <!-- Channel Statistics -->
+  <section id="stats">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Channel Statistics</h2>
+        <i></i>
+      </div>
+      <div class="cnt">
+        <div class="cn rv"><b id="s1" data-to="0">0</b><span>YouTube Subscribers</span></div>
+        <div class="cn rv"><b id="s2" data-to="0">0</b><span>Total Videos</span></div>
+        <div class="cn rv"><b id="s3" data-to="0">0</b><span>Total Views</span></div>
+      </div>
+      <p class="note">Edit the numbers in the CONFIG block inside the script tag.</p>
+    </div>
+  </section>
+
+  <!-- Subscribe CTA -->
+  <section id="subscribe" class="alt">
+    <div class="wrap">
+      <div class="sub rv">
+        <h2>Subscribe to STARK ZONE</h2>
+        <p>Hit subscribe and the bell so every new video finds you first.</p>
+        <a class="btn pulse" data-sub href="#" target="_blank" rel="noopener">&#9654; Subscribe Now</a>
+        <a class="link" data-ch id="chlink" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Links -->
+  <section id="social">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Follow the Zone</h2>
+        <i></i>
+      </div>
+      <div class="soc">
+        <a class="sk rv" data-s="youtube" target="_blank" rel="noopener" href="#"><i>&#9654;</i>YouTube</a>
+        <a class="sk rv" data-s="tiktok" target="_blank" rel="noopener" href="#"><i>&#9835;</i>TikTok</a>
+        <a class="sk rv" data-s="facebook" target="_blank" rel="noopener" href="#"><i>f</i>Facebook</a>
+        <a class="sk rv" data-s="instagram" target="_blank" rel="noopener" href="#"><i>&#9673;</i>Instagram</a>
+        <a class="sk rv" data-s="discord" target="_blank" rel="noopener" href="#"><i>&#9632;</i>Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2>Contact</h2>
+        <p>Collabs, business or just to say hi.</p>
+        <i></i>
+      </div>
+      <div class="ct">
+        <div class="box2 rv">
+          <h3>Get in touch</h3>
+          <p>Email: <a id="em" href="#" style="color:var(--red2)"></a></p>
+          <p>Best for sponsorships, collaborations and channel questions.</p>
+          <div class="row" style="margin-top: 15px;">
+            <a class="btn" id="emb" href="#">Email Us</a>
+            <a class="btn o" data-ch target="_blank" rel="noopener" href="#">YouTube</a>
+          </div>
+        </div>
+        <div class="box2 rv">
+          <h3>Send a message</h3>
+          <form id="cf">
+            <input id="fn" required placeholder="Your name">
+            <input id="fe" type="email" required placeholder="Your email">
+            <textarea id="fm" rows="4" required placeholder="Your message"></textarea>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="#home" class="brand"><span class="logo">SZ</span>STARK ZONE</a>
+        <p style="color:var(--mut);margin-top:12px">Blood Strike, Minecraft, horror and survival gaming.</p>
+      </div>
+      <div>
+        <h4>Quick Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social Media</h4>
+        <ul>
+          <li><a data-s="youtube" target="_blank" rel="noopener" href="#">YouTube</a></li>
+          <li><a data-s="tiktok" target="_blank" rel="noopener" href="#">TikTok</a></li>
+          <li><a data-s="facebook" target="_blank" rel="noopener" href="#">Facebook</a></li>
+          <li><a data-s="instagram" target="_blank" rel="noopener" href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cp">&copy; <span id="yr"></span> STARK ZONE. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div id="lb">
+  <div class="box" id="lbx">
+    <button class="x" aria-label="Close">&times;</button>
+    <span id="lbt"></span>
+  </div>
+</div>
+
+<!-- Game Details Modal -->
+<div id="md">
+  <div class="box">
+    <button class="x" aria-label="Close">&times;</button>
+    <h3 id="mt"></h3>
+    <p id="mp" style="color:var(--mut)"></p>
+    <ul id="ml"></ul>
+    <a class="btn sm" data-ch target="_blank" rel="noopener" href="#">Watch on YouTube</a>
+  </div>
+</div>
+
+<script>
+/* ===== CONFIGURATION ===== */
+const CONFIG = {
+  channelUrl: "https://www.youtube.com/",          // Paste YouTube channel link here
+  email: "contact@starkzone.com",                  // Your contact email
+  social: {
+    youtube: "https://www.youtube.com/",
+    tiktok: "https://www.tiktok.com/",
+    facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
+    discord: "https://discord.com/"
+  },
+  stats: {
+    subscribers: 479,
+    videos: 29,
+    views: 112000
+  },
+  videos: [
+    { title: "Blood Strike Epic Solo Squad Victory", id: "dQw4w9WgXcQ" },
+    { title: "Scariest Horror Night Gameplay", id: "L_LUpnjgPso" },
+    { title: "Minecraft 100 Days Hardcore Survival", id: "kJQP7kiw5Fk" }
+  ]
+};
+/* ========================= */
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+const sep = CONFIG.channelUrl.includes("?") ? "&" : "?";
+$$("[data-sub]").forEach(a => a.href = CONFIG.channelUrl + sep + "sub_confirmation=1");
+$$("[data-ch]").forEach(a => a.href = CONFIG.channelUrl);
+$$("[data-s]").forEach(a => a.href = CONFIG.social[a.dataset.s] || "#");
+
+$("#chlink").textContent = CONFIG.channelUrl;
+$("#em").textContent = CONFIG.email;
+$("#em").href = $("#emb").href = "mailto:" + CONFIG.email;
+$("#yr").textContent = new Date().getFullYear();
+
+$("#s1").dataset.to = CONFIG.stats.subscribers;
+$("#s2").dataset.to = CONFIG.stats.videos;
+$("#s3").dataset.to = CONFIG.stats.views;
+
+window.addEventListener("load", () => setTimeout(() => $("#loader").classList.add("done"), 600));
+setTimeout(() => $("#loader").classList.add("done"), 2500);
+
+/* Mobile Nav Burger toggle */
+const hd = $("#hd"), mn = $("#mn"), bg = $("#bg");
+bg.onclick = () => {
+  const o = mn.classList.toggle("open");
+  bg.setAttribute("aria-expanded", o);
+  bg.innerHTML = o ? "&times;" : "&#9776;";
+};
+
+$$("#mn a").forEach(a => a.addEventListener("click", () => {
+  mn.classList.remove("open");
+  bg.innerHTML = "&#9776;";
+}));
+
+/* Smooth scrolling links */
+$$('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
+  const t = a.getAttribute("href");
+  if (t.length > 1 && $(t)) {
+    e.preventDefault();
+    $(t).scrollIntoView({ behavior: "smooth" });
+  }
+}));
+
+/* Active section highlight on scroll */
+const secs = $$("main section");
+addEventListener("scroll", () => {
+  hd.classList.toggle("sc", scrollY > 30);
+  let c = "home";
+  secs.forEach(s => {
+    if (scrollY + 120 >= s.offsetTop) c = s.id;
+  });
+  $$("#mn a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + c));
+}, { passive: true });
+
+/* Fade out effect when visiting external links */
+$$('a[target="_blank"]').forEach(a => a.addEventListener("click", () => {
+  document.body.classList.add("leaving");
+  setTimeout(() => document.body.classList.remove("leaving"), 600);
+}));
+
+/* Number Counter Animation */
+const count = el => {
+  const to = +el.dataset.to || 0, suf = el.dataset.suf || "", t0 = performance.now();
+  (function f(t) {
+    const p = Math.min((t - t0) / 1600, 1);
+    el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString() + suf;
+    if (p < 1) requestAnimationFrame(f);
+  })(t0);
+};
+
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) {
+    e.target.classList.add("in");
+    $$("[data-to]", e.target).forEach(count);
+    if (e.target.dataset.to) count(e.target);
+    io.unobserve(e.target);
+  }
+}), { threshold: 0.15 });
+
+/* Video Cards population */
+const vids = $("#vids");
+CONFIG.videos.forEach((v, i) => {
+  const d = document.createElement("article");
+  d.className = "vid rv";
+  const bgc = v.id ? `url(https://img.youtube.com/vi/${v.id}/hqdefault.jpg)` : ["linear-gradient(135deg,#7a0010,#120004)", "linear-gradient(135deg,#1a1a2e,#000 60%,#3a0020)", "linear-gradient(135deg,#1b5e20,#0a1a0a)"][i % 3];
+  
+  d.innerHTML = `<button class="vt" style="background-image:${bgc}" aria-label="Play ${v.title}"><span class="pl">&#9654;</span></button>
+  <div class="vb">
+    <h3></h3>
+    <div class="row">
+      <button class="btn sm">View</button>
+      <a class="btn sm o" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+  </div>`;
+  
+  $("h3", d).textContent = v.title;
+  $("a", d).href = v.id ? "https://www.youtube.com/watch?v=" + v.id : CONFIG.channelUrl;
+  
+  const play = () => {
+    const p = $("#player");
+    if (v.id) {
+      p.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+    } else {
+      p.innerHTML = `<p>Add this video&rsquo;s YouTube ID in CONFIG to play it here.<br><br><a class="btn sm" href="${CONFIG.channelUrl}" target="_blank" rel="noopener">Open channel</a></p>`;
+    }
+    p.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  
+  $(".vt", d).onclick = play;
+  $(".btn:not(a)", d).onclick = play;
+  vids.appendChild(d);
+});
+
+/* Gallery population & Lightbox */
+const G = [
+  ["Minecraft World", "&#9935;", "linear-gradient(135deg,#2e7d32,#4e342e)"],
+  ["Horror Night", "&#128128;", "linear-gradient(135deg,#1a1a2e,#3a0020)"],
+  ["Blood Strike Clutch", "&#127919;", "linear-gradient(135deg,#7a0010,#1a0004)"],
+  ["Survival Camp", "&#128293;", "linear-gradient(135deg,#3e2723,#102a10)"],
+  ["Dark Corridor", "&#128367;", "linear-gradient(135deg,#000,#5a0718)"],
+  ["Victory Screen", "&#127942;", "linear-gradient(135deg,#ff1030,#2a0008)"]
+];
+
+G.forEach(g => {
+  const d = document.createElement("div");
+  d.className = "gi rv";
+  d.tabIndex = 0;
+  d.innerHTML = `<div style="background:${g[2]}"></div><em>${g[1]}</em><span>${g[0]}</span>`;
+  
+  const open = () => {
+    $("#lbx").style.background = g[2];
+    $("#lbt").innerHTML = g[1] + "<br>" + g[0];
+    $("#lb").classList.add("on");
+  };
+  
+  d.onclick = open;
+  d.onkeydown = e => e.key === "Enter" && open();
+  $("#gal").appendChild(d);
+});
+
+$("#lb").onclick = e => {
+  if (e.target.id === "lb" || e.target.className === "x") $("#lb").classList.remove("on");
+};
+
+/* Game Details Modal */
+const GI = {
+  mc: ["Minecraft", "Open-world sandbox of mining, building and survival.", ["Survival and creative worlds", "Builds, challenges and experiments"]],
+  bs: ["Blood Strike", "Free-to-play battle royale shooter for mobile.", ["Squad and solo matches", "Fast fights and clutch plays"]],
+  hr: ["Horror Games", "Scary games played for jumpscares and tension.", ["Indie and popular horror titles", "Best with headphones, lights off"]],
+  sv: ["Survival Games", "Gather, craft and survive hostile worlds.", ["Resource and base building", "Long runs with high stakes"]]
+};
+
+$$("[data-game]").forEach(b => b.onclick = () => {
+  const g = GI[b.dataset.game];
+  $("#mt").textContent = g[0];
+  $("#mp").textContent = g[1];
+  $("#ml").innerHTML = g[2].map(x => "<li>" + x + "</li>").join("");
+  $("#md").classList.add("on");
+});
+
+$("#md").onclick = e => {
+  if (e.target.id === "md" || e.target.className === "x") $("#md").classList.remove("on");
+};
+
+addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    $("#md").classList.remove("on");
+    $("#lb").classList.remove("on");
+  }
+});
+
+/* Contact form handler */
+$("#cf").onsubmit = e => {
+  e.preventDefault();
+  location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("STARK ZONE message from " + $("#fn").value) + "&body=" + encodeURIComponent($("#fm").value + "\n\nFrom: " + $("#fe").value);
+};
+
+$$(".rv").forEach(el => io.observe(el));
+
+/* Floating ember particle animation on canvas */
+(function() {
+  const c = $("#fx"), x = c.getContext("2d");
+  let w, h, P = [];
+  
+  const rs = () => {
+    w = c.width = c.offsetWidth;
+    h = c.height = c.offsetHeight;
+    P = Array.from({ length: Math.min(70, w / 16) }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 2 + 0.5,
+      v: Math.random() * 0.7 + 0.2,
+      a: Math.random()
+    }));
+  };
+  
+  rs();
+  addEventListener("resize", rs);
+  
+  (function d() {
+    x.clearRect(0, 0, w, h);
+    P.forEach(p => {
+      p.y -= p.v;
+      p.x += Math.sin(p.y / 40) * 0.3;
+      if (p.y < -5) {
+        p.y = h + 5;
+        p.x = Math.random() * w;
+      }
+      x.beginPath();
+      x.arc(p.x, p.y, p.r, 0, 7);
+      x.fillStyle = `rgba(255, ${40 + p.a * 60 | 0}, 60, ${0.35 + p.a * 0.5})`;
+      x.shadowColor = "#ff1030";
+      x.shadowBlur = 10;
+      x.fill();
+    });
+    requestAnimationFrame(d);
+  })();
+})();
+</script>
+</body>
+</html>
+```
+
+### Highlights of the interactive features:
+- **Embedded YouTube Player:** Click "View" or the play button on any video thumbnail to stream or preview it inline.
+- **Interactive Lightbox & Modals:** Click on any game info button or photo gallery element to test full-screen lightboxes and modals.
+- **Floating Ember Canvas Effect:** Particles float upward dynamically in the Hero banner.
+- **Scroll Counter Animations:** Channel numbers count up when you scroll down to the statistics section.
+- **Fully Mobile Responsive Navigation:** Navigation collapses into a full burger menu on mobile screens.
